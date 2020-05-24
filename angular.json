@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AppVentas"
+    }
+  },
+  "defaultProject": "AppVentas",
+  "cli": {
+    "analytics": "2eecce54-a1b5-4944-98b7-a5fc322bea04"
+  }
 }
