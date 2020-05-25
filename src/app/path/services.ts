@@ -1,7 +1,8 @@
 export const GLOBAL = {
-    contextPath: (window.location.port !== '' ? window.location.origin.replace(window.location.port, '8089') : window.location.origin + ':8089') + '/'
+    contextPath: (window.location.port !== '' ? window.location.origin.replace(window.location.port, '8080') : window.location.origin + ':8080') + '/rest/'
 };
 
 export const CONSTANTES = {
-  autenticar: GLOBAL.contextPath + 'login'
+  autenticar: GLOBAL.contextPath + 'user/autenticar/',
+  cliente: GLOBAL.contextPath + 'cliente'
 };

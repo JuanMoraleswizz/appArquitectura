@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {LoginService} from './login.service';
+import {Usuario} from '../models/usuario';
+import {UserInfo} from '../models/user-info';
+import {NavigationExtras, Route, Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,8 +12,10 @@ import {LoginService} from './login.service';
 })
 export class LoginComponent implements OnInit {
   public form: FormGroup;
+  public user: UserInfo;
   constructor(private loginService: LoginService,
-              private formBuilder: FormBuilder ) { }
+              private formBuilder: FormBuilder ,
+              private  router: Router) { }
 
   ngOnInit(): void {
     this.crearForm();
@@ -22,6 +27,16 @@ export class LoginComponent implements OnInit {
     });
   }
   public autenticar(){
+    const navigationExtras: NavigationExtras = {
+      skipLocationChange: true
+    };
     console.log(this.form.value);
+    this.user = this.form.value;
+    this.loginService.autenticar(this.user).subscribe(response => {
+      alert(response);
+      if (response === 'autenticado con exito'){
+        this.router.navigate( ['home'], navigationExtras);
+      }
+    });
   }
 }

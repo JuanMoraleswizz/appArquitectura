@@ -1,6 +1,6 @@
 export interface Genero {
-    id: number
-    nombre: string
-    prefijo: string
-    
+    id: number;
+    nombre: string;
+    prefijo: string;
+
 }
