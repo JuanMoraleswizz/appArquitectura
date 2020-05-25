@@ -6,6 +6,8 @@ import {RegistroSocioComponent} from './registro-socio/registro-socio.component'
 import {RegistroSocioModule} from './registro-socio/registro-socio.module';
 import {VuelosComponent} from './vuelos/vuelos.component';
 import {VuelosModule} from './vuelos/vuelos.module';
+import {HomeComponent} from './home/home.component';
+import {HomeModule} from './home/home.module';
 
 
 const routes: Routes = [
@@ -18,13 +20,17 @@ const routes: Routes = [
     component: VuelosComponent
   },
   {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
     path: '**',
     component: LoginComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), LoginModule, RegistroSocioModule, VuelosModule],
+  imports: [RouterModule.forRoot(routes), LoginModule, RegistroSocioModule, VuelosModule, HomeModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

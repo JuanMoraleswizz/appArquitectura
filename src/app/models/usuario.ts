@@ -1,7 +1,9 @@
+import {PerfilUsuario} from './perfil-usuario';
+
 export interface Usuario {
     id: number
     usuario: string
-    perfil: PerilUsuario
+    perfil: PerfilUsuario;
     estado: boolean
 
 }

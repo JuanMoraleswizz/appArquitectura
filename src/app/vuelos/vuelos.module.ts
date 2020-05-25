@@ -13,7 +13,7 @@ import {MaterialModules} from '../material.modules';
 @NgModule({
   declarations: [VuelosComponent],
   imports: [
-    CommonModule, MaterialModules
+    CommonModule, MaterialModules, MatInputModule, MatFormFieldModule
   ]
 })
 export class VuelosModule { }

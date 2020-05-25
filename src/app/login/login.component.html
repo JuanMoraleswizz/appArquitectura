@@ -1,8 +1,10 @@
 <div [formGroup]="form" class= "columns is-centered  " >
   <div class="column is-one-quarter box home">
+  <div class="columns is-centered">
     <div class="title  is-centered">
       <h1>Login</h1>
     </div>
+  </div>
     <div class="field">
       <label class="label">Usuario</label>
       <div class="control">
@@ -15,10 +17,12 @@
         <input class="input" type="password" placeholder="Contraseña" formControlName="password">
       </div>
     </div>
-    <div class="field is-grouped">
+    <div class="columns is-centered">
+    <div class="field is-grouped b">
       <div class="control">
         <button class="button is-link" (click)="autenticar()">Login</button>
       </div>
+    </div>
     </div>
   </div>
 </div>
